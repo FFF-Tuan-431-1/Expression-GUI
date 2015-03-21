@@ -8,6 +8,10 @@ Rectangle {
 
     property alias input: input
     GridLayout {
+        anchors.rightMargin: 20
+        anchors.bottomMargin: 12
+        anchors.leftMargin: 0
+        anchors.topMargin: 8
         columns: 2
         anchors.fill: parent
         anchors.margins: 10
@@ -20,7 +24,7 @@ Rectangle {
 
         TextField {
             id: input
-            text: qsTr("0")
+            text: qsTr("")
             Layout.fillWidth: true
         }
 

@@ -3,9 +3,10 @@ import QtQuick.Controls 1.3
 import QtQuick.Window 2.2
 import QtQuick.Dialogs 1.2
 
+
 ApplicationWindow {
     id: applicationWindow1
-    title: qsTr("Culcalater")
+    title: qsTr("Calculater")
     width: 641
     height: 480
     visible: true
@@ -89,10 +90,32 @@ ApplicationWindow {
             pfx.input.text += '0';
         }
         buttonEnter.onClicked: {
-            //.cpp
+            //cpp
         }
         buttonBack.onClicked: {
             pfx.input.text = '';
+        }
+        buttonPlus.onClicked: {
+            pfx.input.text += '+';
+        }
+        buttonSubtraction.onClicked: {
+            pfx.input.text += '-';
+        }
+        buttonMulti.onClicked: {
+            pfx.input.text += '*';
+        }
+        buttonDivision.onClicked: {
+            pfx.input.text += '/';
+        }
+        buttonLeftbra.onClicked: {
+            if (pfx.input.text == '0')
+                pfx.input.text = '';
+            pfx.input.text += '(';
+        }
+        buttonRightbra.onClicked: {
+            if (pfx.input.text == '0')
+                pfx.input.text = '';
+            pfx.input.text += ')';
         }
     }
 
