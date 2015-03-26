@@ -40,62 +40,115 @@ ApplicationWindow {
     MainForm {
         anchors.bottom: parent.bottom
         button1.onClicked: {
+            if(pfx.input.text[pfx.input.text.length-1] == ' '){
+                pfx.input.text = '';
+                pfx.suffix.text = '0';
+                pfx.result.text = '0';
+            }
             if (pfx.input.text == '0')
                 pfx.input.text = '';
             pfx.input.text += '1';
         }
         button2.onClicked: {
+            if(pfx.input.text[pfx.input.text.length-1] == ' '){
+                pfx.input.text = '';
+                pfx.suffix.text = '0';
+                pfx.result.text = '0';
+            }
             if (pfx.input.text == '0')
                 pfx.input.text = '';
             pfx.input.text += '2';
         }
         button3.onClicked: {
+            if(pfx.input.text[pfx.input.text.length-1] == ' '){
+                pfx.input.text = '';
+                pfx.suffix.text = '0';
+                pfx.result.text = '0';
+            }
             if (pfx.input.text == '0')
                 pfx.input.text = '';
             pfx.input.text += '3';
         }
         button4.onClicked: {
+            if(pfx.input.text[pfx.input.text.length-1] == ' '){
+                pfx.input.text = '';
+                pfx.suffix.text = '0';
+                pfx.result.text = '0';
+            }
             if (pfx.input.text == '0')
                 pfx.input.text = '';
             pfx.input.text += '4';
         }
         button5.onClicked: {
+            if(pfx.input.text[pfx.input.text.length-1] == ' '){
+                pfx.input.text = '';
+                pfx.suffix.text = '0';
+                pfx.result.text = '0';
+            }
             if (pfx.input.text == '0')
                 pfx.input.text = '';
             pfx.input.text += '5';
         }
         button6.onClicked: {
+            if(pfx.input.text[pfx.input.text.length-1] == ' '){
+                pfx.input.text = '';
+                pfx.suffix.text = '0';
+                pfx.result.text = '0';
+            }
             if (pfx.input.text == '0')
                 pfx.input.text = '';
             pfx.input.text += '6';
         }
         button7.onClicked: {
+            if(pfx.input.text[pfx.input.text.length-1] == ' '){
+                pfx.input.text = '';
+                pfx.suffix.text = '0';
+                pfx.result.text = '0';
+            }
             if (pfx.input.text == '0')
                 pfx.input.text = '';
             pfx.input.text += '7';
         }
         button8.onClicked: {
+            if(pfx.input.text[pfx.input.text.length-1] == ' '){
+                pfx.input.text = '';
+                pfx.suffix.text = '0';
+                pfx.result.text = '0';
+            }
             if (pfx.input.text == '0')
                 pfx.input.text = '';
             pfx.input.text += '8';
         }
         button9.onClicked: {
+            if(pfx.input.text[pfx.input.text.length-1] == ' '){
+                pfx.input.text = '';
+                pfx.suffix.text = '0';
+                pfx.result.text = '0';
+            }
             if (pfx.input.text == '0')
                 pfx.input.text = '';
             pfx.input.text += '9';
         }
         button0.onClicked: {
+            if(pfx.input.text[pfx.input.text.length-1] == ' ')
+                pfx.input.text = '';
             if (pfx.input.text == '0')
                 pfx.input.text = '';
             pfx.input.text += '0';
         }
         buttonEnter.onClicked: {
             //cpp
+            //if(pfx.input.text[pfx.input.text.length-1] == ' ')
+
+
+
+
             exp.expression = pfx.input.text;
             pfx.suffix.text = exp.expression;
             pfx.result.text = exp.value;
+            pfx.input.text += ' ';
         }
-        buttonBack.onClicked: {
+        buttonBackspace.onClicked: {
             pfx.input.text = '';
         }
         buttonPlus.onClicked: {
@@ -120,6 +173,8 @@ ApplicationWindow {
                 pfx.input.text = '';
             pfx.input.text += ')';
         }
+
+
     }
 
     MessageDialog {

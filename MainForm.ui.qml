@@ -17,7 +17,7 @@ Item {
     property alias button9: button9
     property alias button0: button0
     property alias buttonEnter: buttonEnter
-    property alias buttonBack: buttonBack
+    property alias buttonBackspace: buttonBackspace
     property alias buttonPlus: buttonPlus
     property alias buttonSubtraction: buttonSubtraction
     property alias buttonMulti: buttonMulti
@@ -26,14 +26,18 @@ Item {
     property alias buttonRightbra: buttonRightbra
 
 
+
+
     GridLayout {
         anchors.verticalCenterOffset: 0
             anchors.horizontalCenterOffset: 1
             anchors.centerIn: parent
             columns: 3
-            rows: 6
+            rows: 7
             columnSpacing: 4
             rowSpacing: 4
+
+
 
             Button {
                 id: buttonPlus
@@ -121,7 +125,7 @@ Item {
             }
 
             Button {
-                id: buttonBack
+                id: buttonBackspace
                 text: qsTr("Backspace")
             }
         }
