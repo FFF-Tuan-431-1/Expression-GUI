@@ -91,6 +91,9 @@ ApplicationWindow {
         }
         buttonEnter.onClicked: {
             //cpp
+            exp.expression = pfx.input.text;
+            pfx.suffix.text = exp.expression;
+            pfx.result.text = exp.value;
         }
         buttonBack.onClicked: {
             pfx.input.text = '';

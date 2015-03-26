@@ -7,6 +7,8 @@ Rectangle {
     height: 100
 
     property alias input: input
+    property alias suffix: suffix
+    property alias result: result
     GridLayout {
         anchors.rightMargin: 20
         anchors.bottomMargin: 12
