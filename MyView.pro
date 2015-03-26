@@ -25,3 +25,6 @@ HEADERS += \
     src/Suffix.h \
     src/Util.h \
     expression.h
+
+DISTFILES += \
+    README.md
