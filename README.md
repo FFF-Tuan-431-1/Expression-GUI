@@ -9,7 +9,7 @@
 
 ### Expression.cpp
 
-对Calculate类的进一步封装，现在继承自QObject类，并且向QML暴露了`expression` 和 `value` 2个属性，可以实现C++与QML的交互。
+对Calculate类的进一步封装，现在继承自QObject类，并且向QML暴露了`expression` `value` `suffix` `error`   4个属性，可以实现C++与QML的交互。
 
 
 ## QML 文件

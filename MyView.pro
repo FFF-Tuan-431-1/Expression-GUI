@@ -8,7 +8,7 @@ SOURCES += main.cpp \
     src/Check.cpp \
     src/Suffix.cpp \
     src/Util.cpp \
-    expression.cpp
+    src/Expression.cpp
 
 RESOURCES += qml.qrc
 
@@ -24,7 +24,9 @@ HEADERS += \
     src/Check.h \
     src/Suffix.h \
     src/Util.h \
-    expression.h
+    expression.h \
+    src/Expression.h
 
 DISTFILES += \
-    README.md
+    README.md \
+    view/Util.js

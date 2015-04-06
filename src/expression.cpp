@@ -1,5 +1,5 @@
-#include "expression.h"
-#include "src/Calculate.h"
+#include "Expression.h"
+#include "Calculate.h"
 
 Expression::Expression(QObject *parent) : QObject(parent)
 {
@@ -16,5 +16,9 @@ QString Expression::getSuffix() {
 
 int Expression::getValue() {
     return calculate.getAnswer();
+}
+
+bool Expression::isError() {
+    return calculate.isError();
 }
 
