@@ -1,8 +1,7 @@
 <RCC>
     <qresource prefix="/">
-        <file>view/components/MainForm.ui.qml</file>
-        <file>view/components/Printfx.ui.qml</file>
         <file>view/main.qml</file>
         <file>view/Util.js</file>
+        <file>view/components/Calculator.ui.qml</file>
     </qresource>
 </RCC>
