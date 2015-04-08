@@ -66,7 +66,7 @@ int Calculate::getAnswer() {
 
 bool Calculate::isError() {
     Check check(infix);
-    return  !check.checkError();
+    return !check.checkError();
 }
 
 string Calculate::getSuffix() {
