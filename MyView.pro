@@ -24,7 +24,6 @@ HEADERS += \
     src/Check.h \
     src/Suffix.h \
     src/Util.h \
-    expression.h \
     src/Expression.h
 
 DISTFILES += \

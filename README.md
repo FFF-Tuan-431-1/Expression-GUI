@@ -14,14 +14,11 @@
 
 ## QML 文件
 
-### MyView.qml
+QML 文件划分
 
-入口界面……
+- view/main.qml 主文件
+- view/calculator.qml 计算器主文件
+- view/components/screen.qml 显示屏文件
+- view/components/keyboard.qml 键盘文件
+- view/components/button.ui.qml 自定义按键文件（暂时不需要加）
 
-### MainForm.ui.qml
-
-输入界面...
-
-### Printfx.ui.qml
-
-显示信息……

@@ -3,13 +3,14 @@ import QtQuick.Controls 1.3
 import QtQuick.Layouts 1.1
 
 Rectangle {
-    width: 640
-    height: 100
-
+    width: 400
+    height: 120
     property alias input: input
     property alias suffix: suffix
     property alias result: result
+
     GridLayout {
+
         anchors.rightMargin: 20
         anchors.bottomMargin: 12
         anchors.leftMargin: 0
@@ -45,8 +46,6 @@ Rectangle {
         }
 
 
-
-
         Label {
             text: "Result:"
         }
@@ -56,13 +55,7 @@ Rectangle {
             text: qsTr("0")
             Layout.fillWidth: true
         }
-
-
-
     }
-
-
-
 }
 
 
