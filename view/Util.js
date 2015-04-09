@@ -1,30 +1,34 @@
 .pragma library
 
-function onKeyBtnListener(value, input, suffix, result) {
-    if(input.text[input.text.length-1] == ' '){
+function onKeyBtnListener(value, input, suffix, result,counter) {
+    if(counter == 1){
         input.text = '';
         suffix.text = '0';
         result.text = '0';
+        counter = 0;
     }
     if (input.text == '0')
         input.text = '';
     input.text += value;
+    return counter ;
 }
 
-function onEnterBtnListener(exp, input, suffix, result) {
+function onEnterBtnListener(exp, input, suffix, result,counter) {
     exp.expression = input.text;
     if(exp.isError == true){
         suffix.text = "error";
         result.text = "error";
-        input.text += ' ';
+        counter = 1;
+
 
     }
     else {
         suffix.text = exp.suffix;
         result.text = exp.value;
-        input.text += ' ';
-    }
+        counter = 1;
 
+    }
+        return counter ;
 }
 
 function onBackspaceBtnListener(input){
