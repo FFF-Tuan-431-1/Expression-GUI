@@ -37,6 +37,8 @@ Rectangle {
             buttonEnter.onClicked: counter = Logic.onEnterBtnListener(exp,screen.input, screen.suffix, screen.result,counter);
 
             buttonBackspace.onClicked: Logic.onBackspaceBtnListener(screen.input);
+            buttonDelete.onClicked:counter = Logic.onDeleteBtnListener(screen.input, counter);
+            buttonAns.onClicked:counter = Logic.onAnsBtnListener(screen.input, screen.result, counter);
 
         }
 
