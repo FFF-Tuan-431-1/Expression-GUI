@@ -26,16 +26,21 @@ Rectangle {
     property alias buttonDivision: buttonDivision
     property alias buttonLeftbra: buttonLeftbra
     property alias buttonRightbra: buttonRightbra
+    property alias buttonDelete: buttonDelete
+    property alias buttonAns: buttonAns
 
     GridLayout {
+        width: 245
 
-        anchors.verticalCenterOffset: 0
+        anchors.verticalCenterOffset: 1
         anchors.horizontalCenterOffset: 1
         anchors.centerIn: parent
         columns: 3
-        rows: 7
+        rows: 8
         columnSpacing: 4
         rowSpacing: 4
+
+
 
         Button {
             id: buttonPlus
@@ -134,13 +139,26 @@ Rectangle {
         }
 
         Button {
-            id: buttonEnter
-            text: qsTr("Enter")
+            id: buttonDelete
+            text: qsTr("DEL")
         }
 
         Button {
             id: buttonBackspace
-            text: qsTr("Backspace")
+            text: qsTr("AC")
+        }
+
+        Button {
+            id: buttonAns
+            width: 75
+            text: qsTr("Ans")
+
+        }
+
+        Button {
+            id: buttonEnter
+            width: 157
+            text: qsTr("Enter")
         }
     }
 }

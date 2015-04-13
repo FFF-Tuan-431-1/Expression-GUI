@@ -4,7 +4,9 @@ import QtQuick.Layouts 1.1
 
 import "qrc:/view/Util.js" as Logic
 
+
 Rectangle {
+    property var counter: 0
     width: 400
     height: 800
 
@@ -15,26 +17,28 @@ Rectangle {
         }
 
         Keyboard{
-            button1.onClicked: Logic.onKeyBtnListener(1, screen.input, screen.suffix, screen.result);
-            button2.onClicked: Logic.onKeyBtnListener(2, screen.input, screen.suffix, screen.result);
-            button3.onClicked: Logic.onKeyBtnListener(3, screen.input, screen.suffix, screen.result);
-            button4.onClicked: Logic.onKeyBtnListener(4, screen.input, screen.suffix, screen.result);
-            button5.onClicked: Logic.onKeyBtnListener(5, screen.input, screen.suffix, screen.result);
-            button6.onClicked: Logic.onKeyBtnListener(6, screen.input, screen.suffix, screen.result);
-            button7.onClicked: Logic.onKeyBtnListener(7, screen.input, screen.suffix, screen.result);
-            button8.onClicked: Logic.onKeyBtnListener(8, screen.input, screen.suffix, screen.result);
-            button9.onClicked: Logic.onKeyBtnListener(9, screen.input, screen.suffix, screen.result);
-            button0.onClicked: Logic.onKeyBtnListener(0, screen.input, screen.suffix, screen.result);
+            button1.onClicked: counter = Logic.onKeyBtnListener(1, screen.input, screen.suffix, screen.result,counter);
+            button2.onClicked: counter = Logic.onKeyBtnListener(2, screen.input, screen.suffix, screen.result,counter);
+            button3.onClicked: counter = Logic.onKeyBtnListener(3, screen.input, screen.suffix, screen.result,counter);
+            button4.onClicked: counter = Logic.onKeyBtnListener(4, screen.input, screen.suffix, screen.result,counter);
+            button5.onClicked: counter = Logic.onKeyBtnListener(5, screen.input, screen.suffix, screen.result,counter);
+            button6.onClicked: counter = Logic.onKeyBtnListener(6, screen.input, screen.suffix, screen.result,counter);
+            button7.onClicked: counter = Logic.onKeyBtnListener(7, screen.input, screen.suffix, screen.result,counter);
+            button8.onClicked: counter = Logic.onKeyBtnListener(8, screen.input, screen.suffix, screen.result,counter);
+            button9.onClicked: counter = Logic.onKeyBtnListener(9, screen.input, screen.suffix, screen.result,counter);
+            button0.onClicked: counter = Logic.onKeyBtnListener(0, screen.input, screen.suffix, screen.result,counter);
 
-            buttonPlus.onClicked: Logic.onKeyBtnListener('+', screen.input, screen.suffix, screen.result);
-            buttonSubtraction.onClicked: Logic.onKeyBtnListener('-', screen.input, screen.suffix, screen.result);
-            buttonMulti.onClicked: Logic.onKeyBtnListener('*', screen.input, screen.suffix, screen.result);
-            buttonDivision.onClicked: Logic.onKeyBtnListener('/', screen.input, screen.suffix, screen.result);
-            buttonLeftbra.onClicked: Logic.onKeyBtnListener('(', screen.input, screen.suffix, screen.result);
-            buttonRightbra.onClicked: Logic.onKeyBtnListener(')', screen.input, screen.suffix, screen.result);
-            buttonEnter.onClicked: Logic.onEnterBtnListener(exp,screen.input, screen.suffix, screen.result);
+            buttonPlus.onClicked: counter = Logic.onKeyBtnListener('+', screen.input, screen.suffix, screen.result,counter);
+            buttonSubtraction.onClicked: counter = Logic.onKeyBtnListener('-', screen.input, screen.suffix, screen.result,counter);
+            buttonMulti.onClicked: counter = Logic.onKeyBtnListener('*', screen.input, screen.suffix, screen.result,counter);
+            buttonDivision.onClicked: counter = Logic.onKeyBtnListener('/', screen.input, screen.suffix, screen.result,counter);
+            buttonLeftbra.onClicked: counter = Logic.onKeyBtnListener('(', screen.input, screen.suffix, screen.result,counter);
+            buttonRightbra.onClicked: counter = Logic.onKeyBtnListener(')', screen.input, screen.suffix, screen.result,counter);
+            buttonEnter.onClicked: counter = Logic.onEnterBtnListener(exp,screen.input, screen.suffix, screen.result,counter);
 
             buttonBackspace.onClicked: Logic.onBackspaceBtnListener(screen.input);
+            buttonDelete.onClicked:counter = Logic.onDeleteBtnListener(screen.input, counter);
+            buttonAns.onClicked:counter = Logic.onAnsBtnListener(screen.input, screen.result, counter);
 
         }
 

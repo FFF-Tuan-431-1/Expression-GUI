@@ -6,6 +6,7 @@ import QtQuick.Dialogs 1.2
 import "qrc:/view/Util.js" as Logic
 import "qrc:/view/components" as Components
 
+
 ApplicationWindow {
     id: applicationWindow1
     width: 400
