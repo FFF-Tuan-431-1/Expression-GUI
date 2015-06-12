@@ -28,6 +28,7 @@ Rectangle {
     property alias buttonRightbra: buttonRightbra
     property alias buttonDelete: buttonDelete
     property alias buttonAns: buttonAns
+    property alias buttonD0: buttonD0
 
     GridLayout {
         width: 245
@@ -138,6 +139,19 @@ Rectangle {
 
         }
 
+
+        Button {
+            id: buttonD0
+            width: 157
+            text: qsTr("00")
+        }
+
+        Button {
+            id: buttonEnter
+            width: 157
+            text: qsTr("=")
+        }
+
         Button {
             id: buttonDelete
             text: qsTr("DEL")
@@ -155,11 +169,12 @@ Rectangle {
 
         }
 
-        Button {
-            id: buttonEnter
-            width: 157
-            text: qsTr("Enter")
-        }
+
+
+
+
+
+
     }
 }
 

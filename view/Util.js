@@ -9,7 +9,12 @@ function onKeyBtnListener(value, input, suffix, result,counter) {
     }
     if (input.text == '0')
         input.text = '';
-    input.text += value;
+    if(value == 'd'){
+        input.text += '0';
+        input.text += '0';
+    }
+    else
+        input.text += value;
     return counter ;
 }
 
@@ -18,15 +23,10 @@ function onEnterBtnListener(exp, input, suffix, result,counter) {
     if(exp.isError == true){
         suffix.text = "error";
         result.text = "error";
-
-
-
     }
     else {
         suffix.text = exp.suffix;
         result.text = exp.value;
-
-
     }
         counter = 1;
         return counter ;
@@ -51,8 +51,6 @@ function onAnsBtnListener(input, result, counter){
         counter = 1;
         return counter;
     }
-
-
     if (counter == 1){
     input.text = result.text;
     }

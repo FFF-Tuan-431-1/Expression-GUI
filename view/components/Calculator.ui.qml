@@ -27,6 +27,7 @@ Rectangle {
             button8.onClicked: counter = Logic.onKeyBtnListener(8, screen.input, screen.suffix, screen.result,counter);
             button9.onClicked: counter = Logic.onKeyBtnListener(9, screen.input, screen.suffix, screen.result,counter);
             button0.onClicked: counter = Logic.onKeyBtnListener(0, screen.input, screen.suffix, screen.result,counter);
+            buttonD0.onClicked: counter = Logic.onKeyBtnListener('d', screen.input, screen.suffix, screen.result,counter);
 
             buttonPlus.onClicked: counter = Logic.onKeyBtnListener('+', screen.input, screen.suffix, screen.result,counter);
             buttonSubtraction.onClicked: counter = Logic.onKeyBtnListener('-', screen.input, screen.suffix, screen.result,counter);
@@ -39,6 +40,8 @@ Rectangle {
             buttonBackspace.onClicked: Logic.onBackspaceBtnListener(screen.input);
             buttonDelete.onClicked:counter = Logic.onDeleteBtnListener(screen.input, counter);
             buttonAns.onClicked:counter = Logic.onAnsBtnListener(screen.input, screen.result, counter);
+
+
 
         }
 
